@@ -8,7 +8,7 @@ def check_input(user_input):  # Тут у нас в скобочках пара�
      то пользователь будет уведомлен об этом и вынужден совершить повторный ввод."""
     while True:
         try:  # Пробуем преобразовать к целочисленному формату
-            result = int(user_input)
+            result = float(user_input)
         except ValueError:  # Если возникнет ошибка, то пользователь должен снова ввести данные, а цикл пойдет по новой
             user_input = input('Error, you need to write number, try again: ')
         else:  # А если все ок, то функция вернет пользователю результат преобразования.
@@ -35,7 +35,8 @@ def main():
         second_num = check_input(input('Enter second number: '))
 
         # Выводим результат:
-        print(f'The result of multiplication of {first_num} on {second_num} is {second_num * first_num}.')
+        print(f'The result of multiplication of {first_num:,.1f} on {second_num:,.1f} is '
+              f'{second_num * first_num:,.2f}.')
 
         cont = check_continuation(cont)
 
