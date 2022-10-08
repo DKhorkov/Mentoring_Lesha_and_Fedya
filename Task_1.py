@@ -41,4 +41,5 @@ def main():
         cont = check_continuation(cont)
 
 
-main()
+if __name__ == '__main__':
+    main()
